@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            width: 60%;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Toolbar</legend>
+        <div>
+            Number
+            <input type='text' id='number' />
+            <input type='button' value='Add To List' onclick="add()" />
+            
+            <input type='button' value='Clear Display' onclick="clearDisplay()" />
+            
+            <input type='button' value='Reset Calculator' onclick="resetcal()" />
+
+            <br/>
+            <input type='button' value='Sum' onclick="sumall()" />
+            <input type='button' value='Average' onclick="avg()"  />
+            <input type='button' value='Find Min' onclick="minall()"  />
+
+        </div>
+
+    </fieldset>
+
+    <hr/>
+
+    <fieldset>
+        <legend>Console</legend>
+
+        <div id='console'>
+            <!-- <p>sum is 60</p>
+            <p>average is 20</p> -->
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Number List</legend>
+
+        <ul id='numberList'>
+            <!-- <li>29</li>
+            <li>11</li>
+            <li>10</li> -->
+        </ul>
+
+        <input type='button' value='refresh list' onclick="refresh()"/>
+    </fieldset>
+
+    <script>
+        var arr = [];
+        var sum = 0;
+        //var num = document.getElementById('number').value;
+        var Conlist = document.getElementById('console');
+        var Numlist = document.getElementById('numberList');
+
+        var add = function (){
+            var num = document.getElementById('number').value;
+            if(isNaN(num)){
+                Conlist.innerHTML += `<p>Enter a valid number</p>`
+                //Conlist.innerHTML = "Enter a valid number";
+            }
+            else{
+                arr.push(parseInt(num));
+                sum+=parseInt(num);
+                Numlist.innerHTML += `<li>${num}</li>`;
+            }   
+        }
+
+        var clearDisplay = function(){
+            Conlist.innerHTML = "";
+            numberList.innerHTML = "";   
+        }
+
+        var resetcal = function(){
+            sum = 0;
+            arr = [];
+            Conlist.innerHTML = "";
+            Numlist.innerHTML = "";
+        }
+
+        var sumall = function(){
+            Conlist.innerHTML += `<p>Sum is ${sum}</p>`;
+            //Conlist.innerHTML = "Sum is "+sum;
+        }
+
+        var avg = function(){
+            if(arr.length == 0)
+                Conlist.innerHTML += `<p>Empty Array</p>`;
+                //Conlist.innerHTML = "Empty Array";
+            else
+                Conlist.innerHTML += `<p>Average is ${sum/arr.length}</p>`;
+                //Conlist.innerHTML = "Average is "+sum/arr.length;
+        }
+
+        var minall = function(){
+            if(arr.length == 0){
+                Conlist.innerHTML += `<p>Empty Array</p>`;
+                //Conlist.innerHTML = "Empty Array";
+            }
+            else{
+                arr.sort();
+                Conlist.innerHTML += `<p>Minimum is ${arr[0]}</p>`;
+                //Conlist.innerHTML = "Minimum is "+arr[0];
+            }
+        }
+
+        var refresh = function(){
+            Numlist.innerHTML = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
