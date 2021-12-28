@@ -59,6 +59,7 @@ obj.clear=function(){
 
 obj.refresh = function(){
     numberList.innerHTML='';
+    //comment
 }
 
 
