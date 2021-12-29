@@ -3,7 +3,7 @@ function Book(Title,Author,Price,Rating){
     this.Author = Author;
     this.Price = Price;
     this.Rating = Rating;
-}
+};
 
 var Book1 = new Book("Moon Story","Ram Singh",376,4.3);
 var Book2 = new Book("Story of DayLight","Shreya Tripathi",234,3.0);
@@ -36,26 +36,41 @@ function BookManager(){
     }
 
     this.getBookByAuthor = function(Author){
+        var count = 0;
+        console.log("Books of Given Author "+Author+" are:-")
         for(var book of this.AllBook){
-            if(book.Author===Author)
+            if(book.Author===Author){
                 this.printBookDetails(book);
+                count++;
+            }
         }
+        console.log("Total "+count+" books of found\n");
     }
 
     this.getBooksInPriceRange = function(min,max){
+        var count = 0;
+        console.log("Books in given price range of "+min+" and "+max+" are:-")
         for(var book of this.AllBook){
-            if(book.Price>=min && book.Price<=max)
+            if(book.Price>=min && book.Price<=max){
                 this.printBookDetails(book);
+                count++;
+            }
         }
+        console.log("Total "+count+" books of found\n");
     }
 
     this.getBooksWithRatingabove = function(rating){
+        var count = 0;
+        console.log("Books of rating above than "+rating+" are:-")
         for(var book of this.AllBook){
-            if(book.Price>rating)
+            if(book.Rating>rating){
                 this.printBookDetails(book);
+                count++;
+            }
         }
+        console.log("Total "+count+" books of found\n");
     }
-}
+};
 
 var BookStore = new BookManager();
 BookStore.addBook(Book1);

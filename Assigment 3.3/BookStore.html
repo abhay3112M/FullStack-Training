@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+
+<body>
+    <h1>Book Store</h1>
+    <form>
+        <label>Search</label>
+        <select id="bookType" name="Type">
+            <option value = "selectType">---Please Select---</option>
+            <option value = "ISBN">ISBN</option>
+            <option value = "Author">Author</option>
+            <option value = "Title">Title</option>
+        </select>
+    </form>
+
+    <br>
+    <input type='text' id='searchType' />
+    <input type='button' value='Search' onclick='bookManager.performFunction();' />
+    <br>
+    
+    <table style="width:50%" id="tableId">
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>>
+            <th>Rating</th>
+        </tr>
+    </table>
+    <script src="BookStore.js"></script>
+</body>
+</html>
