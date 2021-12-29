@@ -1,1 +1,7 @@
-git pull origin master
+//to push the changes
+git add .
+git commit -m "msg"
+git push
+
+//to pull trainers work
+git pull

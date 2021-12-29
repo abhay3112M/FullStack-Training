@@ -1,3 +1,4 @@
+
 var obj = new Object();
 var numbers=[];
 var numberInput=document.getElementById('number');
