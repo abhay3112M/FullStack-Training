@@ -1,12 +1,4 @@
-/*const Book= function (title,author,price,rating){
-    this.title=title;
-    this.author=author;
-    this.price=price;
-    this.rating=rating;
-}
-
-*/
-var allBooks = [
+[
     {
     "_id": {
       "$oid": "5f4fc2136980a8fb2b76e857"
@@ -14,7 +6,6 @@ var allBooks = [
     "isbn": "9781393495574",
     "title": "The Accursed God",
     "author": "Vivek Dutta Mishra",
-    "price": "350",
     "pages": "380",
     "rating": "4.9",
     "votes": "49",
@@ -38,7 +29,6 @@ var allBooks = [
     "isbn": "1408855658",
     "title": "Harry Potter and the Philosopher's Stone ",
     "author": "JK Rowling",
-    "price": "450",
     "pages": "384",
     "rating": "4.7",
     "votes": "8518",
@@ -54,15 +44,13 @@ var allBooks = [
     "cover": "https://m.media-amazon.com/images/I/51UoqRAxwEL.jpg",
     "price": 500,
     "reviews": []
-  },
-  {
+  },{
     "_id": {
       "$oid": "5f4fbe4c6980a8fb2b76e854"
     },
     "isbn": "0007527519",
     "title": "Five Little Pigs",
     "author": "Agatha Christie",
-    "price": "200",
     "pages": "288",
     "rating": "4.6",
     "votes": "605",
@@ -86,7 +74,6 @@ var allBooks = [
     "isbn": "9781408855706",
     "title": "Harry Potter and the Half Blood Prince",
     "author": "JK Rowling",
-    "price": "500",
     "pages": "560",
     "rating": "4.7",
     "votes": "5651",
@@ -107,7 +94,6 @@ var allBooks = [
     "isbn": "9781408855690",
     "title": "Harry Potter and the Order of the Phoenix",
     "author": "JK Rowling",
-    "price": "450",
     "pages": "816",
     "rating": "4.7",
     "votes": "4519",
@@ -123,77 +109,4 @@ var allBooks = [
     "cover": "https://m.media-amazon.com/images/I/51-SI2+aQ2L._SY346_.jpg",
     "reviews": []
   }
-];
-
-
-var search = function(list, match){
-    var result=[];
-    for(var value of list){
-        if(match(value))
-            result.push(value);
-    }
-    return result;
-}
-
-
-var BookManager = function(){
-
-    this.db = allBooks;
-    this.addBook=function(book){
-      this.db[this.db.length]=book;
-}
-
-this.addBooks=function(...books){
-  this.db=[...this.db,...books];
-}
-
-this.getAllBooks=function(){
-  return this.db;
-}
-    
-    this.getBooksByisbn = function(ISBN){
-        return search(this.db,book=>(book.isbn===ISBN))
-    }
-
-    this.getBooksByAuthor=function(author){
-        author=author.toLowerCase();        
-        return search(this.db, book=>book.author.toLowerCase().includes(author));
-    }
-    this.getBooksByTitle=function(title){
-        title=title.toLowerCase();       
-        return search(this.db, book=>book.title.toLowerCase()===title);
-    }
-
-    this.addToTable = function(bookList){
-        var tableContent = document.getElementById("tableId");
-        tableContent.innerHTML = '<tr><th>Cover</th><th>Title</th><th>Author</th><th>Price</th>><th>Rating</th></tr>';
-        for(var eachBook of bookList){
-            tableContent.innerHTML += '<tr><td><img src="'+eachBook.cover+'"></td><td>'+eachBook.title+'</td><td>'+eachBook.author+'</td><td>'+eachBook.price+'</td><td>'+eachBook.rating+'</td></tr>'
-        }
-    }
-
-    this.performFunction = function(){
-        var category = document.getElementById("bookType");
-        var searchValue = document.getElementById('searchType');
-        if(category.selectedIndex <=0 || searchValue.value==="")
-          alert("Please Select Valid Category and Related value");
-        else if (category.selectedIndex===1){
-            var isbn = searchValue.value;
-            var listofBooks = this.getBooksByisbn(isbn);
-            this.addToTable(listofBooks);
-        }
-        else if (category.selectedIndex===2){
-            var author = searchValue.value;
-            var listofBooks = this.getBooksByAuthor(author);
-            this.addToTable(listofBooks);
-        }
-        else{
-            var title = searchValue.value;
-            var listofBooks = this.getBooksByTitle(title);
-            this.addToTable(listofBooks);
-        }
-    }
-};
-
-
-var bookManager = new BookManager();
+]

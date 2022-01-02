@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 class='siteTitle'>Book's Web</h1>
+        <ul class='nav'>
+            <li><a href="./index.html">Home</a></li>
+        </ul>
+    </header>
+
+    <h1>Enter the Book details :-</h1>
+    <div class='Add New Book'>
+        <form>
+            <label>Title</label><br>
+            <input type="text" id="title"><br>
+            <label>Author</label><br>
+            <input type="text" id="author"><br>
+            <label>Price</label><br>
+            <input type="text" id="price"><br>
+            <label>Cover</label><br>
+            <input type="text" id="cover"><br>
+            <label>Rating</label><br>
+            <input type="text" id="rating"><br>
+            <label>Description</label><br>
+            <textarea id="description"></textarea> <br><br>
+            <input type='button' value='ADD' onclick='obj.addBook();'>
+            <!-- <a href="./addbook.html"><input type="button" value="Add Another"></a> -->
+        </form>
+        <!-- <button id="search-button">ADD</button> -->
+    </div>
+
+    <script src="scripts/utils.js"></script>
+    <script src='scripts/book.js'></script>
+    <script src='scripts/book-manager.js'></script>
+    <script src='scripts/app.js'></script>
+
+</body>
+</html>
