@@ -3,5 +3,7 @@ git add .
 git commit -m "msg"
 git push
 
+git update
 //to pull trainers work
+git reset --hard //to override changes
 git pull
