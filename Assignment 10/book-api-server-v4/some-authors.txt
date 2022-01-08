@@ -1,0 +1,27 @@
+{
+    "name": "Mr Morgan Housel",
+    "id": "123",
+    "biography": "worked on many books and delivered some of amazing life changing and motivational books",
+    "photograph": "morgan.jpg" 
+}
+
+{
+    "name": "JK Rowling",
+    "id": "825",
+    "biography": "famous writer known for harry potter series",
+    "photograph": "rowling.jpeg" 
+}
+
+{
+    "name": "Samir Soni",
+    "id": "678",
+    "biography": "very good writer and poet also",
+    "photograph": "soni.img" 
+}
+
+{
+    "name": "Gaur Gopal Das",
+    "id": "555",
+    "biography": "A saint and writer always talk about life and sprituality",
+    "photograph": "saint_gopal.jpg" 
+}
