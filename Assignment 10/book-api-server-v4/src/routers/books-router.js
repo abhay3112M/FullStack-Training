@@ -6,7 +6,6 @@ module.exports=()=>{
 
     //const router = express.Router();
     var router = express();
-    console.log("reached here book router");
     router
         .route('/')
         .get(getAllBooks)

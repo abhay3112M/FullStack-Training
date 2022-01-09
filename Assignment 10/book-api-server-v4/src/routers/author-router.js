@@ -4,7 +4,6 @@ const {getAllAuthors,addAuthor,getAuthorById,updateAuthorById,deleteAuthorById,g
 module.exports=()=>{
 
     const router = express.Router();
-    console.log("reached here author router");
     router
         .route("/")
         .get(getAllAuthors)

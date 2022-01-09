@@ -47,7 +47,10 @@ const deleteBook = async(isbn)=>{
             isbn:isbn
         }
     });
-    return result;
+    if(result)
+        return result;
+    else
+        throw new Error(`Book does not exist`);
 }
 
 const getInPriceRange = async(min,max)=>{

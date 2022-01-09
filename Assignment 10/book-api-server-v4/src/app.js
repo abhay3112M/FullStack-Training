@@ -14,7 +14,6 @@ var configureMiddlewares=async(app,baseDir)=>{
 
 
 var configureRoutes=async(app)=>{
-    console.log("reached here app.js");
     app.use('/api/books', getBookRouter());
     app.use('/api/authors', getAuthorRouter());
     app.use('/api/user',getUserRouter());

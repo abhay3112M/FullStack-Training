@@ -1,5 +1,6 @@
 const {sequelize} = require('../data/connection');
 const {user} = sequelize.models;
+const {Op} = require("sequelize");
 
 const getAllUser = async () => {
     const users = await user.findAll();
@@ -11,8 +12,19 @@ const addUser = async(user1) => {
     return dbUser;
 }
 
-const loginUser = async () => {
-    //what to do 
+const loginUser = async (uname,pwd) => {
+    const user1 = await user.findOne({
+        where:{
+            [Op.and]:{
+                username:uname,
+                password:pwd
+            }
+        }
+    });
+    if(user1)
+        return user1;
+    else 
+        throw new Error('Invalid username or password');
 }
 
 const getUserByEmail = async (email) => {
@@ -43,7 +55,10 @@ const updateUserPwdByEmail = async (email,pwd) => {
             email:email
         }
     });
-    return result;
+    if(result[0])
+        return result;
+    else
+        throw new Error('Invalid Email Id');
 }
 
 module.exports = {

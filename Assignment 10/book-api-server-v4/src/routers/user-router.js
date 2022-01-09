@@ -11,7 +11,7 @@ module.exports =()=>{
 
     router
         .route("/login")
-        .get(loginUser) //what to do
+        .get(loginUser)
 
     router
         .route("/:email")

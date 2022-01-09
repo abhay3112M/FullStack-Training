@@ -33,7 +33,10 @@ const deleteAuthorById = async(id)=>{
             id:id
         }
     });
-    return result;
+    if(result)
+        return result;
+    else
+        throw new Error('Book does not exist');
 }
 
 const getBookByAuthorId = async(id)=>{

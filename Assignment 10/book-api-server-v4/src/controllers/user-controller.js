@@ -19,7 +19,13 @@ const addUser =async (request, response) => {
 }
 
 const loginUser =async (request, response) => {
-    //what to do
+    try{
+        const user1 = await service.loginUser(request.body.username,request.body.password);
+        response.status(200).json({message:"Login Successful",user1});
+    }
+    catch(error){
+        response.status(400).json({message: error.message});
+    }
 }
 
 const getUserByEmail =async (request, response) => {

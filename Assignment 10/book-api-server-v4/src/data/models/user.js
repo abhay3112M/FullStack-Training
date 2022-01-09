@@ -1,7 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 module.exports=(sequelize) => {
-    console.log('building the user model ');
+    console.log('building the user model...');
     sequelize.define(
         "user", //Name of this model
         {
