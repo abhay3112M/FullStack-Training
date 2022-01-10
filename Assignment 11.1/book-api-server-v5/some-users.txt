@@ -1,0 +1,25 @@
+{
+    "username": "abhay3112",
+    "email": "abhay_demo@gbook.com",
+    "password": "abhay121",
+    "photograph": "abhaypic.jpg"
+}
+
+{
+    "username": "ashutosh420",
+    "email": "ashutosh_hero@orkut.com",
+    "password": "ashutosh169",
+    "photograph": "ashudemo.jpg"
+}
+{
+    "username": "rishu1612",
+    "email": "rishu_book@gmail.com",
+    "password": "notrishu001",
+    "photograph": "rishuphoto.jpeg"
+}
+{
+    "username": "karthik006",
+    "email": "karthik_Mob@yahoo.com",
+    "password": "karthik@99",
+    "photograph": "picKarthik.jpg"
+}

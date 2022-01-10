@@ -1,6 +1,5 @@
 const {Sequelize}=require('sequelize');
 
-
 //create a connection
 
 const dbName='mobileum-books';

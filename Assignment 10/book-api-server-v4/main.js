@@ -1,6 +1,5 @@
 const {createApp} = require('./src/app');
 
-
 const start=async()=>{
 
     const app=await createApp(__dirname );
@@ -12,7 +11,6 @@ const start=async()=>{
     server.on('error',error=>console.error('error:',error.message));
 
 }
-
 start();
 
 //http://localhost:5000/api/books/
