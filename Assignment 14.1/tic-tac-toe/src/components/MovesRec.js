@@ -12,14 +12,16 @@ const MovesRec = (props) => {
         )
     }
     return(
-        <table className="table">
-            <tr className="tablehead">
-                <th>Moves</th>
-                <th>Player</th>
-                <th>Position</th>
-            </tr>
-            {allmove}
-        </table>
+        <div className>
+            <table>
+                <tr>
+                    <th>Moves</th>
+                    <th>Player</th>
+                    <th>Position</th>
+                </tr>
+                {allmove}
+            </table>
+        </div>
     )
 }
 

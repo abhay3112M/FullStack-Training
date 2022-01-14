@@ -1,4 +1,4 @@
-const Check=(cells,id)=>{
+const check=(cells,id)=>{
     var grid = new Array(3);
     for(var i=0;i<3;i++)
         grid[i] = [cells[3*i+0],cells[3*i+1],cells[3*i+2]];
@@ -41,6 +41,6 @@ const Check=(cells,id)=>{
     return "C";
 }
 
-export default Check;
+export default check;
 
 

@@ -99,7 +99,7 @@ header{
     
     margin-left: auto;
     margin-right: auto;
-    color:rgb(240, 73, 8)
+    color:rgb(231, 105, 105);;
 }
 
 .temp{
@@ -109,14 +109,21 @@ header{
 .info{
     height: 200px;
     width: 50%;
+    margin-left: 50px;
     margin-right: 20px;
-    margin-bottom: 50px;
-}
-table, th, td{
-    border:1px solid black;
-    width:100%;
+    margin-top: 50px;
 }
 
-.tablehead{
+table, th, td{
+    border:1px solid black;
+    width:200%;
     background-color: rgb(82, 187, 201);
+    text-align: center;
+    margin-top:30px;
 }
+
+th{
+    color:white;
+    background-color: rgb(231, 105, 105);
+}
+

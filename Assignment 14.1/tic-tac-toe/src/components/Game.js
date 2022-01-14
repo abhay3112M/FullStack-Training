@@ -3,7 +3,7 @@ import Status from './Status';
 import ScoreBoard from './ScoreBoard';
 import Info from './Info';
 import Board from './Board';
-import Check from './Checker';
+import check from '../services/checker';
 import MovesRec from './MovesRec';
 
 
@@ -30,10 +30,10 @@ class Game extends React.Component {
         
         cells[id]=this.state.next;
 
-        var result=Check(cells,id);
+        var result=check(cells,id);
         if(result==='W'){
             message = 'Winner :';
-            next = `'${this.state.next}'`;
+            next = `'${this.state.next}' 😁`;
             gameover=true;
             total+=1;
             if(this.state.next==='O') wino+=1;
@@ -41,7 +41,7 @@ class Game extends React.Component {
         }
         else if(result==='D'){
             message = 'Stalemate';
-            next='';
+            next='😐';
             gameover=true;
             total+=1;
             draw+=1;
@@ -94,6 +94,7 @@ class Game extends React.Component {
 
     render=()=>{
         return (
+            <div>
             <div className='allgame'>
                 <ScoreBoard total={this.state.total} wino={this.state.wino} winx={this.state.winx} draw={this.state.draw} />
                 <div className='game'>
@@ -102,7 +103,8 @@ class Game extends React.Component {
                     <button className="reset-button" onClick={this.handleReset}> Reset </button>
                 </div>
                 <MovesRec move={this.state.moves}/>
-                
+            </div>
+                <Info/>
             </div>
         );           
     }
@@ -110,4 +112,3 @@ class Game extends React.Component {
 }
 
 export default Game;
-//<Info/>
