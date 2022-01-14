@@ -4,13 +4,14 @@ import ScoreBoard from './ScoreBoard';
 import Info from './Info';
 import Board from './Board';
 import Check from './Checker';
+import MovesRec from './MovesRec';
 
 
 class Game extends React.Component {
 
     constructor(props){
         super(props);
-        this.state={...this.getInitialState(),...this.getIntialScore()}
+        this.state={...this.getInitialState(),...this.getIntialScore(),...this.getInitialMovesRec()}
     }
 
     handleCellClick=(id)=>{
@@ -22,7 +23,7 @@ class Game extends React.Component {
         var gameover=this.state.gameover;
         var total=this.state.total,wino=this.state.wino;
         var winx=this.state.winx,draw=this.state.draw;
-        
+        var moves = this.state.moves;
 
         if(cells[id]!=='_' || gameover)
             return ; //this value had  earlier.
@@ -48,9 +49,10 @@ class Game extends React.Component {
         else{
             next=this.state.next==='O'?'X':'O';
         }
+        moves.push({player:cells[id],pos:id});
 
         //update the state
-        this.setState({cells,message,next,gameover,total,wino,winx,draw});
+        this.setState({cells,message,next,gameover,total,wino,winx,draw,moves});
         console.log('cell clicked', id);
     }
 
@@ -75,10 +77,18 @@ class Game extends React.Component {
         }
     }
 
+    getInitialMovesRec=()=>{
+        return {
+            moves:[]
+        }
+    }
+
+
     handleReset=(id)=>{
         if(!this.state.gameover)
             return;
         this.setState(this.getInitialState());
+        this.setState(this.getInitialMovesRec());
     }
 
 
@@ -91,7 +101,8 @@ class Game extends React.Component {
                     <Board cells={this.state.cells} onCellClick={this.handleCellClick}/>
                     <button className="reset-button" onClick={this.handleReset}> Reset </button>
                 </div>
-                <Info/>
+                <MovesRec move={this.state.moves}/>
+                
             </div>
         );           
     }
@@ -99,3 +110,4 @@ class Game extends React.Component {
 }
 
 export default Game;
+//<Info/>
