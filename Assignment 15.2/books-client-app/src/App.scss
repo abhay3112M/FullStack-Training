@@ -1,0 +1,141 @@
+
+@import "./variables";
+
+.App{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.AppHeader{
+    background-color:$primary_color;
+    color:$primary_contrast_color;
+}
+
+
+
+.Screen{
+    margin:10px;
+    /* border:1px solid gray; */
+    flex:1;
+
+    h1{
+        color:$primary_color
+    }
+    h3{
+        font-size:1.5 em;
+        font-style: italic;
+    }
+    .badge{
+        margin:2px;
+    }
+}
+
+
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:$primary_color;
+    color: $primary_contrast_color;
+    text-align: center;
+}
+
+.navbar-light .navbar-brand{
+    color: $primary_contrast_color !important;
+    font-weight: bold;
+}
+
+.BookListScreen{
+    li{
+        list-style: none;
+        margin:10px;
+    }
+    img{
+        height:80px;
+        margin:5px;
+        box-shadow: -2px -2px 2px $primary_color;
+    }
+}
+
+.BookDetailsScreen{
+    img{
+        width:90%;
+        height:auto;
+        border:10px solid $primary_color;
+        box-shadow:-5px -5px 5px gray;
+        border-radius: 10px;
+        padding:0px;
+    }
+}
+
+.AuthorListScreen{
+    li{
+        list-style: none;
+        margin:10px;
+    }
+}
+
+.AuthorDetailsScreen{
+    border: 3px solid black;
+    img{
+        width:60%;
+        height:auto;
+        border:10px solid $primary_color;
+        box-shadow:-5px -5px 5px gray;
+        border-radius: 10px;
+        padding:0px;
+    }
+}
+
+.roundbutton{
+    padding: 8px;
+    width:auto;
+    border-radius: 5px;
+    display:inline-block;
+}
+
+.BookRecommendationScreen{
+    display:flex;
+    padding:5px;
+    img{
+        height:50%;
+        width: 25%;
+        border:10px solid $primary_color;
+        box-shadow:-5px -5px 5px gray;
+        border-radius: 10px;
+        padding: 0px;
+    }
+}
+
+.img-fluid{
+    height:10%;
+    width:50%;
+    border:10px solid $primary_color;
+    box-shadow:-5px -5px 5px gray;
+    border-radius: 10px;
+    padding:0px;
+}
+
+.quote{
+    padding:7px;
+}
+
+.logininput{
+    width:auto;
+}
+
+.loginimage{
+    width: 100%;
+    height: 100%;
+    //background: #a84909;
+    border-radius: 50%;
+}
+
+.right{
+    margin-left:auto;
+    margin-right:1;
+    float:right;
+}

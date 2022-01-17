@@ -17,7 +17,7 @@ const MovesBoard=({moves})=>{
                     <tr key={index}>
                         <td>{index+1}</td>
                         <td>{move.player}</td>
-                        <td>[{Math.floor((move.position-1)/3)+1}][{(move.position-1)%3+1}]</td>
+                        <td>{move.position}</td>
                     </tr>
                 ))}
             </tbody>
