@@ -18,13 +18,15 @@ const App=({})=>{
     return <div className="App">
                <AppHeader title="World Wide Books" />
                <div className='Screen'>
-                    {/* <BookListInfoScreen/> */}
+
+                    {/* <BookListInfoScreen/> 
                     <AuthorListInfoScreen/>
-                    {/* <BookRecommendationScreen/> 
-                    <NotFoundScreen/> 
+                    <BookRecommendationScreen/> 
+                    <NotFoundScreen/>
                     <BookHomeScreen/>
                     <LoginScreen/>
                     <AddNewBookScreen/> */}
+                    <BookListScreen/> 
                </div>
                <AppFooter />
             </div>

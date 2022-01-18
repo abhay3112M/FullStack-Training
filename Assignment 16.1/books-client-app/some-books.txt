@@ -1,0 +1,30 @@
+{
+  "isbn": "690978766",
+  "title": "The Psychology of Money",
+  "author": "Mr Morgan Housel",
+  "price": "250",
+  "cover": "https://images-na.ssl-images-amazon.com/images/I/41r6F2LRf8L._SX323_BO1,204,203,200_.jpg",
+  "rating": "4.7",
+  "details": "In the psychology of money, the author shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life?s most important matters"
+}
+
+{
+  "isbn": "688978766",
+  "title": "Life's Amazing Secrets",
+  "author": "Gaur Gopal Das",
+  "price": "147",
+  "cover": "https://images-na.ssl-images-amazon.com/images/I/51PJyvcfPGL._SX321_BO1,204,203,200_.jpg",
+  "rating": "4.6",
+  "details": "How to Find Balance and Purpose in Your Life,Inspirational book on motivation, self-development & healthy living"
+}
+
+
+{
+  "isbn": "4589086524",
+  "title": "My Experiments with Silence",
+  "author": "Samir Soni",
+  "price": "279",
+  "cover": "https://images-na.ssl-images-amazon.com/images/I/41xt6vMHCsL._SX351_BO1,204,203,200_.jpg",
+  "rating": "4.4",
+  "details": "My Experiments with Silence: The Diary Of-An-Introvert, A book on some myth of life"
+}

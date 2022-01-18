@@ -1,14 +1,17 @@
 import React from 'react';
+import {withTitle} from '../hoc/withTitle'
+import {withTimer} from '../hoc/withTimer'
 let bookModule = require('../services/books.js');
 
-const BookListScreen=({})=>{
+const BookListScreen=({currtime})=>{
     //TODO: Initialize Here
     const books=bookModule.books;
 
     return (
+        // <h1>Book List</h1>
+        <div>
+        <h3>{currtime.toLocaleTimeString()}</h3>
         <div className='BookListScreen'>
-            <h1>Book List</h1>
-
             <ul>
                 {books.map(book=>(
                     <li key={book.isbn}>
@@ -19,9 +22,10 @@ const BookListScreen=({})=>{
             </ul>
 
         </div>
+        </div>
     );
 }
 
-export default BookListScreen;
+export default withTimer(withTitle(BookListScreen,"Book List"));
 
 

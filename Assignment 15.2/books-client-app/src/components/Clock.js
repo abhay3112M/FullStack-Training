@@ -32,9 +32,10 @@ class Clock extends React.Component {
         const seconds=twoDigit(t.getSeconds());
 
         return <div className="clock">
-            <span className="hour">{hour}</span>
+            <span>{this.state.time.toLocaleTimeString()}</span>
+            {/* <span className="hour">{hour}</span>
             <span className='min'>:{min}</span>
-            <span className='second'>:{seconds}</span>
+            <span className='second'>:{seconds}</span> */}
         </div>
     }
 }
